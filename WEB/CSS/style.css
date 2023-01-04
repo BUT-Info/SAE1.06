@@ -1,0 +1,120 @@
+
+  /* Style pour les titres de sommaire */
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  /* Style pour les liens du sommaire */
+  ul a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  /* Style pour les liens actifs du sommaire */
+  ul a:active,
+  ul a:focus,
+  ul a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+
+
+  table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+
+  .card {
+    perspective: 150rem;
+    position: relative;
+    height: 40rem;
+    max-width: 400px;
+    margin: 2rem;
+    box-shadow: none;
+    background: none;
+  }
+  
+  .card-side {
+    height: 35rem;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 2rem;
+    color: white;
+  }
+  
+  .card-side.back {
+    transform: rotateY(-180deg);
+    background: rgb(170,121,32);
+    background: linear-gradient(90deg, rgba(170,121,32,1) 0%, rgba(161,70,13,1) 96%); 
+  }
+  
+  .card-side.front {
+    background: rgb(25,238,75);
+    background: linear-gradient(90deg, rgba(25,238,75,1) 0%, rgba(96,217,140,1) 81%); 
+  }
+  
+  .card:hover .card-side.front {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .card-side.back {
+    transform: rotateY(0deg);
+  }
+  
+    
+  .card2 {
+    perspective: 150rem;
+    position: relative;
+    height: 40rem;
+    max-width: 400px;
+    margin: 2rem;
+    box-shadow: none;
+    background: none;
+  }
+
+  .card-side2 {
+    height: 35rem;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 2rem;
+    color: white;
+  }
+  
+  .card-side.back2 {
+    transform: rotateY(-180deg);
+    background: rgb(170,121,32);
+    background: linear-gradient(90deg, rgba(170,121,32,1) 0%, rgba(161,70,13,1) 96%); 
+  }
+  
+  .card-side.front2 {
+    background: rgb(25,238,75);
+    background: linear-gradient(90deg, rgba(25,238,75,1) 0%, rgba(96,217,140,1) 81%); 
+  }
+  
+  .card2:hover .card-side.front2 {
+    transform: rotateY(180deg);
+  }
+  
+  .card2:hover .card-side.back2 {
+    transform: rotateY(0deg);
+  }
+
+
+
