@@ -1,9 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+
+  }
+  
+  .navbar-brand {
+    color: lightgray;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.2s;
+  }
+  
+  .navbar-brand:hover {
+    color: white;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .nav-item {
+    margin-left: 1rem;
+  }
+  
+  .nav-link {
+    color: lightgray;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: white;
+  }
+  
+  
 
   /* Style pour les titres de sommaire */
   h1 {
-    font-size: 18px;
+
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: None;
   }
 
   /* Style pour les liens du sommaire */
@@ -20,6 +77,10 @@
     text-decoration: underline;
   }
 
+li{
+    font-size: 1.4em;
+    margin-top: 40px;
+}
 
   table {
     border: 1px solid black;
@@ -30,19 +91,31 @@
     padding: 5px;
   }
 
+.reponse{
+    font-size: large;
+}
 
-  .card {
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .card, .card2 {
+    cursor: pointer;
     perspective: 150rem;
     position: relative;
-    height: 40rem;
-    max-width: 400px;
-    margin: 2rem;
+    height: 60rem;
+    max-width: 600px;
+    flex-grow: 1;
+    margin: 1rem;
     box-shadow: none;
     background: none;
   }
   
-  .card-side {
-    height: 35rem;
+  .card-side, .card-side2 {
+    height: 55rem;
+    overflow: auto;
     border-radius: 15px;
     transition: all 0.8s ease;
     backface-visibility: hidden;
@@ -54,38 +127,30 @@
     color: white;
   }
   
-  .card-side.back {
+  .card-side.back, .card-side.back2 {
     transform: rotateY(-180deg);
-    background: rgb(170,121,32);
-    background: linear-gradient(90deg, rgba(170,121,32,1) 0%, rgba(161,70,13,1) 96%); 
+    background: pink; 
   }
   
-  .card-side.front {
-    background: rgb(25,238,75);
-    background: linear-gradient(90deg, rgba(25,238,75,1) 0%, rgba(96,217,140,1) 81%); 
+  .card-side.front, .card-side.front2 {
+    background: lightblue;
   }
-  
-  .card:hover .card-side.front {
-    transform: rotateY(180deg);
-  }
-  
-  .card:hover .card-side.back {
-    transform: rotateY(0deg);
-  }
-  
-    
+
+
+
   .card2 {
     perspective: 150rem;
     position: relative;
-    height: 40rem;
-    max-width: 400px;
-    margin: 2rem;
+    height: 60rem;
+    max-width: 600px;
+    flex-grow: 1;
+    margin: 1rem;
     box-shadow: none;
     background: none;
   }
-
+  
   .card-side2 {
-    height: 35rem;
+    height: 55rem;
     border-radius: 15px;
     transition: all 0.8s ease;
     backface-visibility: hidden;
@@ -99,19 +164,11 @@
   
   .card-side.back2 {
     transform: rotateY(-180deg);
-    background: rgb(170,121,32);
-    background: linear-gradient(90deg, rgba(170,121,32,1) 0%, rgba(161,70,13,1) 96%); 
+    background: lightcoral;
   }
   
   .card-side.front2 {
-    background: rgb(25,238,75);
-    background: linear-gradient(90deg, rgba(25,238,75,1) 0%, rgba(96,217,140,1) 81%); 
+    background: lightgreen; 
   }
+
   
-  .card2:hover .card-side.front2 {
-    transform: rotateY(180deg);
-  }
-  
-  .card2:hover .card-side.back2 {
-    transform: rotateY(0deg);
-  }
