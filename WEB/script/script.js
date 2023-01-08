@@ -42,3 +42,26 @@ function flipCard(){
     }
 
 }
+
+
+const cards = document.querySelectorAll('.card, .card2');
+
+cards.forEach(card => {
+    // Sélectionne tous les éléments .card-side
+    const sides = card.querySelectorAll('.card-side');
+    sides.forEach(side => {
+        side.addEventListener('pointerover', function() {
+            this.style.overflow = 'auto';
+        });
+        side.addEventListener('pointerout', function() {
+            this.style.overflow = 'hidden';
+        });
+    });
+});
+
+$(function(){
+    $("#btnTop").click(function(){
+        $("html, body").animate({scrollTop: 0},"slow");
+    });
+});
+
